@@ -41,7 +41,7 @@ func _on_update_moves():
 	if current_moves <= 0 and current_score < 1000:
 		print("No tienes más movimientos")
 		emit_signal("times_up")
-	elif current_score >= 1000:
+	elif current_moves > 0 and current_score >= 1000:
 		print("Ganaste")
 		current_moves = 16
 		emit_signal("won")
@@ -51,6 +51,10 @@ func _on_timer_timeout():
 	counter_label.text = str(current_timer) 
 	type_label.text = "BY TIME" 
 
-	if current_timer <= 0:
-		print("Se acabo el tiempo")
+	if current_timer <= 0 and current_score < 1000:
+		print("No tienes más movimientos")
 		emit_signal("times_up")
+	elif current_timer > 0 and current_score >= 1000:
+		print("Ganaste")
+		current_timer = 61
+		emit_signal("won")

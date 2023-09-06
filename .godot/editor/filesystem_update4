@@ -1,7 +1,5 @@
 res://scenes/game.tscn
-res://scripts/grid.gd
 res://scripts/top_ui.gd
-res://scenes/top_ui.tscn
 res://scenes/game_over.tscn
 res://scenes/won.tscn
-res://scenes/Button.gd
+res://scenes/top_ui.tscn

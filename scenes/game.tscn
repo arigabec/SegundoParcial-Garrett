@@ -28,7 +28,6 @@ x_start = 64
 y_start = 800
 offset = 64
 y_offset = 2
-is_on_moves = true
 
 [node name="Timer" type="Timer" parent="grid"]
 
